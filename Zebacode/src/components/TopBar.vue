@@ -1,11 +1,10 @@
 <template>
     <div class="row">
-        <img src="../assets/logo.png" alt="logo" width="100"/>
+        <img src="../assets/logo.png" alt="logo" width="120"/>
     </div>
 </template>
 
 <script>
-    import { ref } from "vue";
 </script>
 
 <style scoped>
@@ -14,6 +13,7 @@
         justify-content: center;
         align-items: center;
         margin: 0;
-        padding: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 </style>

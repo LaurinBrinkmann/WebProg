@@ -2,22 +2,23 @@
 import { ref } from "vue";
 import { StreamBarcodeReader } from "vue-barcode-reader";
 
-const decodedText = ref("");
-
+const decodedText = ref(true);
 const onLoaded = () => {
   console.log("loaded");
 };
-
 const onDecode = (text) => {
   decodedText.value = text;
 };
+
+function toggleOnDecode() {
+  decodedText.value =!decodedText.value
+}
 </script>
 
 <template>
   <StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
-  <h3>Scanned Text
-  <br>
-  {{ decodedText }}</h3>
+  <h3 v-if="decodedText">Your decoding</h3>
+  <h3 v-else>{{ decodedText }}</h3>
 </template>
 
 <style scoped>
@@ -31,5 +32,6 @@ a {
 h3 {
   color: #ffffff;
   text-align: center;
+  margin-top: 10px;
 }
 </style>
