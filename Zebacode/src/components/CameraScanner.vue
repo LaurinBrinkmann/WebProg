@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import { StreamBarcodeReader } from "vue-barcode-reader";
 
-const decodedText = ref(true);
+const decodedText = ref('');
 const onLoaded = () => {
   console.log("loaded");
 };
@@ -17,7 +17,7 @@ function toggleOnDecode() {
 
 <template>
   <StreamBarcodeReader @decode="onDecode" @loaded="onLoaded"></StreamBarcodeReader>
-  <h3>Your decoding test</h3>
+  <h3>Your decoding</h3>
   <h3>{{ decodedText }}</h3>
 </template>
 
