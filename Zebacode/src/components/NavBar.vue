@@ -1,11 +1,11 @@
 <template>
     <div class="nav-bar row">
-        <h5 class="green">ZEBACODE</h5>
+        <h5 class="green">SCAN</h5>
+        <h5 class="green">HISTORY</h5>
     </div>
 </template>
 
 <script>
-    import { ref } from "vue";
 </script>
 
 <style scoped>
@@ -29,5 +29,6 @@
       color: #42b983;
       font-family: "Roboto Condensed", sans-serif;
       letter-spacing: 1.5px;
+      padding: 10px;
     }
 </style>

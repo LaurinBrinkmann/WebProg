@@ -6,27 +6,12 @@
     
 </template>
 
-<!-- <script setup>
-import { ref } from "vue";
-import { inject } from "vue";
-import { StreamBarcodeReader } from "vue-barcode-reader";
-const decodedText = ref("");
-
-const onLoaded = () => {
-  console.log("loaded");
-};
-
-const onDecode = (text) => {
-  decodedText.value = text;
-  this.$emit("codeScanned", text);
-};
-</script> -->
-
 <script>
   import { StreamBarcodeReader } from "vue-barcode-reader";
-  
+  import axios from 'axios';
+
   export default {
-    emits: ["codeScanned"],
+    emits: ['codeScanned'],
     name: "CameraScanner",
     components: {
       StreamBarcodeReader
@@ -43,7 +28,10 @@ const onDecode = (text) => {
       onDecode: function(text) {
         this.decodedText = text;
         console.log(text);
-        this.$emit("codeScanned", text);
+        axios.post("http://localhost:8080/add", {
+          name: text
+        })
+        console.log("emitting");
       }
     }
   }
