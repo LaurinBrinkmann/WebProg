@@ -6,10 +6,10 @@
     
 </template>
 
-<script setup>
+<!-- <script setup>
 import { ref } from "vue";
+import { inject } from "vue";
 import { StreamBarcodeReader } from "vue-barcode-reader";
-//import { addEntry } from "../App.vue";
 const decodedText = ref("");
 
 const onLoaded = () => {
@@ -18,8 +18,35 @@ const onLoaded = () => {
 
 const onDecode = (text) => {
   decodedText.value = text;
-  //addEntry(text);
+  this.$emit("codeScanned", text);
 };
+</script> -->
+
+<script>
+  import { StreamBarcodeReader } from "vue-barcode-reader";
+  
+  export default {
+    emits: ["codeScanned"],
+    name: "CameraScanner",
+    components: {
+      StreamBarcodeReader
+    },
+    data: function() {
+      return {
+        decodedText: ""
+      };
+    },
+    methods: {
+      onLoaded: function() {
+        console.log("loaded");
+      },
+      onDecode: function(text) {
+        this.decodedText = text;
+        console.log(text);
+        this.$emit("codeScanned", text);
+      }
+    }
+  }
 </script>
 
 <style scoped>

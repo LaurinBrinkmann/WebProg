@@ -1,9 +1,10 @@
 <template>
-<router-view />
+<router-view v-on:codeScanned="addEntry"/>
 </template>
 
 <script>
 import axios from "axios";
+import { provide } from "vue";
 
 export default {
   name: "App",
@@ -14,9 +15,10 @@ export default {
   },
   methods: {
     addEntry: function(e) {
+      console.log(e);  
       axios
         .post("http://localhost:8080/add", {
-          name: e.name    
+          name: e
         })
         .then(response => {
           this.listOfEntries = response.data;
