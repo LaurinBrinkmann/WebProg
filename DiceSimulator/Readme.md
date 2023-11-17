@@ -9,6 +9,8 @@ Wir haben uns dafür entschieden einen Würfelgenerator für das Spielprinzip Du
 ## Umsetzung
 ### Logik
 Zuerst wurde eine HelloWorld Serverless Function als Beispiel herangezogen um zutesten, ob die Kommunikation mit Azur über Postman funktioniert. Nach dem Sichergestellt wurde das die Serveless Function Kommunikation steht, wurde die Logik für den Würfelwurf implementiert. 
+[Link zum Code](https://github.com/LaurinBrinkmann/WebProg/blob/main/DiceSimulator/src/functions/dicesim.js)
+
 ### Fehlerbehandlung
 Über eine If-Abfrage wurde geklärt, ob der Nutzer beim senden des Requests vergessen hat, Parameter anzugeben. Sobald der Nutzer keinen Interger-Wert übergibt wird eine 400-Fehlermeldung geworfen, mit der bitte richtige Parameter zu übergeben. Wenn ein korrekter Request abgeschickt wurde wird eine 200-Statusmeldung zurückgeben.
 ### Output
@@ -30,4 +32,4 @@ Unsere Erfahrung mit AI haben wir durch die Verwendung von GitHubCopilot gemacht
 ```javascript
 Math.floor(Math.random()
 ```
-Ebenfalls half uns GitHubCopilot bei Syntax Schwierigkeiten in Java Script.
+Ebenfalls half uns GitHubCopilot bei Syntax Schwierigkeiten in JavaScript.
