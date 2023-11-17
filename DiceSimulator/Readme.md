@@ -4,8 +4,7 @@
 Erstellen Sie auf der Azure Plattform eine Serverless Function mit Node.js und HttpTrigger, die mehrere Parameter via HTTP erhält und dann ein individuell berechnetes/erstelltes, sinnvolles Ergebnis zurückgibt. Stellen
 Sie sicher, dass Sie den Code vollständig verstehen und erklären können.
 ### Idee 
-Wir haben uns dafür entschieden einen Würfelgenerator für das Spielprinzip Dungeon&Dragons zuerstellen, falls man sein physisches Würfelset vergessen hat. Hierbei können eine bestimmte Anzahl an Würfeln mit unterschiedlichen Augenzahlen gewürfelt werden. Dabei können jedoch pro Wurf nur Würfel mit gleicher Augenzahlen verwendet werden z.B 3 mal der Würfel mit der Augenzahl 6 (wie im Spielprinzip Dungeon&Dragons).
-
+Wir haben uns dafür entschieden einen Würfelgenerator für das Spielprinzip Dungeon&Dragons zuerstellen, falls man sein physisches Würfelset vergessen hat. Hierbei können eine bestimmte Anzahl an Würfeln mit unterschiedlichen Augenzahlen gewürfelt werden. Dabei können jedoch pro Wurf nur Würfel mit gleicher Augenzahlen verwendet werden. Zum Beispiel 3 mal der Würfel mit der Augenzahl 6.
 ## Umsetzung
 ### Logik
 Zuerst wurde eine HelloWorld Serverless Function als Beispiel herangezogen um zu testen, ob die Kommunikation mit Azur über Postman funktioniert. Nach dem Sichergestellt wurde, dass die Serveless Function Kommunikation steht, wurde die Logik für den Würfelwurf implementiert. 
