@@ -12,7 +12,7 @@ Zuerst wurde eine HelloWorld Serverless Function als Beispiel herangezogen um zu
 [Link zum Code](https://github.com/LaurinBrinkmann/WebProg/blob/main/DiceSimulator/src/functions/dicesim.js)
 
 ### Fehlerbehandlung
-Über eine If-Abfrage wurde geklärt, ob der Nutzer beim senden des Requests vergessen hat, Parameter anzugeben. Sobald der Nutzer keinen Interger-Wert übergibt wird eine 400-Fehlermeldung geworfen, mit der bitte richtige Parameter zu übergeben. Wenn ein korrekter Request abgeschickt wurde wird eine 200-Statusmeldung zurückgeben.
+Über eine If-Abfrage wurde geklärt, ob der Nutzer beim Senden des Requests vergessen hat, Parameter anzugeben. Sobald der Nutzer keinen Interger-Wert übergibt wird eine 400-Fehlermeldung geworfen, mit der bitte richtige Parameter zu übergeben. Wenn ein korrekter Request abgeschickt wurde wird eine 200-Statusmeldung zurückgeben.
 ### Output
 Als Letztes wurde sich um das verschönern des Outputs gekümmert, um eine verständliche Ausgabe über den Würfelwurf zuerhalten.
 
