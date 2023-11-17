@@ -8,7 +8,7 @@ Wir haben uns dafür entschieden einen Würfelgenerator für das Spielprinzip Du
 
 ## Umsetzung
 ### Logik
-Zuerst wurde eine HelloWorld Serverless Function als Beispiel herangezogen um zu testen, ob die Kommunikation mit Azur über Postman funktioniert. Nach dem Sichergestellt wurde das die Serveless Function Kommunikation steht, wurde die Logik für den Würfelwurf implementiert. 
+Zuerst wurde eine HelloWorld Serverless Function als Beispiel herangezogen um zu testen, ob die Kommunikation mit Azur über Postman funktioniert. Nach dem Sichergestellt wurde, dass die Serveless Function Kommunikation steht, wurde die Logik für den Würfelwurf implementiert. 
 [Link zum Code](https://github.com/LaurinBrinkmann/WebProg/blob/main/DiceSimulator/src/functions/dicesim.js)
 
 ### Fehlerbehandlung
