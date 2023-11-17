@@ -30,4 +30,4 @@ Unsere Erfahrung mit AI haben wir durch die Verwendung von GitHubCopilot gemacht
 ```javascript
 Math.floor(Math.random()
 ```
-Ebenfalls half uns GitHubCopilot bei Syntax Schwierigkeiten.
+Ebenfalls half uns GitHubCopilot bei Syntax Schwierigkeiten in Java Script.
