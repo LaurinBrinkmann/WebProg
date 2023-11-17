@@ -17,8 +17,8 @@ Zuerst wurde eine HelloWorld Serverless Function als Beispiel herangezogen um zu
 Als Letztes wurde sich um das verschönern des Outputs gekümmert, um eine verständliche Ausgabe über den Würfelwurf zuerhalten.
 
 ## Verwendung über Postman
-Um die Serverless Function aufzurufen wird in Postman ein POST-Request über folgende URL gesendet
-in diesem Beispiel werden 3 Würfel mit der höchst möglichen Augenzahl 6 geworfen:
+Um die Serverless Function aufzurufen wird in Postman ein POST-Request über folgende URL gesendet. In diesem Beispiel werden 3 Würfel mit der höchst möglichen Augenzahl 6 geworfen:
+
 https://dicesimulator.azurewebsites.net/api/dicesim?diceCount=3&eyeCount=6
 
 ![Doku1](IMG/Doku1.png)
