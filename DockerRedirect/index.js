@@ -11,9 +11,9 @@ const authenticate = (req, res, next) => {
     const token = req.headers.authorization;
     
     if (token === 'very-secret-token') {
-    next();
+        next();
     } else {
-    res.status(401).json({ error: 'Unauthorized' });
+        res.status(401).json({ error: 'Unauthorized' });
     }
 };
 
@@ -28,8 +28,10 @@ app.get('/entries', authenticate, (req, res) => {
 app.get("/:slug", (req, res) => {
     const { slug } = req.params;
     const entries = JSON.parse(fs.readFileSync('./data/entries.json', 'utf8'));
-    
-    if (entries[slug]) {
+    console.log(slug);
+    console.log(entries);
+    console.log(entries[slug]);    
+    if (entries[slug]) {      
         res.redirect(entries[slug]);
     } else {
         res.status(404).json({ error: 'Slug not found' });
@@ -37,17 +39,19 @@ app.get("/:slug", (req, res) => {
 });
 
 // DELETE /entry/:slug - Eintrag mit der gegebenen Slug aus der Datei entfernen
-app.delete('/entry/:slug', (req, res) => {
-const { slug } = req.params;
-const entries = JSON.parse(fs.readFileSync('./data/entries.json', 'utf8'));
-
-if (entries[slug]) {
-    delete entries[slug];
-    fs.writeFileSync('./data/entries.json', JSON.stringify(entries, null, 2));
-    res.json({ success: true });
-} else {
-    res.status(404).json({ error: 'Slug not found' });
-}
+app.delete("/entry/:slug", (req, res) => {
+    const slug = req.params.slug;
+    const entries = JSON.parse(fs.readFileSync('./data/entries.json', 'utf8'));
+    console.log(slug);
+    console.log(entries);
+    console.log(entries[slug]);
+    if (entries[slug]) {
+        delete entries[slug];
+        fs.writeFileSync('./data/entries.json', JSON.stringify(entries, null, 2));
+        res.json({ success: true });
+    } else {
+        res.status(404).json({ error: 'Slug not found' });
+    }
 });
   
 // POST /entry - URL und Slug für die spätere Weiterleitung speichern
