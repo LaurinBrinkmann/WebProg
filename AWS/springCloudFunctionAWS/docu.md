@@ -1,4 +1,10 @@
 # Testing with Postman
+## Create JAR-AWS File
+cd AWS/springCloudFunctionAWS
+mvn clean package
+## Edit AWS Runtime
+- check if Java 17
+- org.springframework.cloud.function.adapter.aws.FunctionInvoker::handleRequest
 ## Make AWS Lambda Function public
 1. under your selected lambda-function choose Configurations
 2. go to Function-URL
