@@ -7,17 +7,24 @@
 <template>
   <body>
     <TopBar />
-    <CameraScanner />
+    <div>
+      <CameraScanner />
+    </div>
     <NavBar />
   </body>
 </template>
 
 <style scoped>
   body {
-    margin: 0;
+    margin: auto;
     padding: 0;
     background-color: #1a1a1a;
     height: 100vh;
+  }
+
+  div {
+    margin: auto;
+    width: 640px;
   }
 </style>
 
